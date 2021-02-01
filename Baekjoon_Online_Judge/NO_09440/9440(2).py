@@ -37,7 +37,7 @@ if __name__ == "__main__":
                 number2 += '0'
             
         for i in range(2, int(N) - zero):
-            if i % 2 == 0:
+            if i % 2 == 0 + zero % 2:
                 number1 += numbers[i]
             
             else:
