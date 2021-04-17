@@ -21,7 +21,9 @@ if __name__ == "__main__":
     
     for ind in range(N):
         for rem, val in enumerate(health):
-            if rem > L[ind]:
+            if rem > L[ind] and val:
                 health[rem - L[ind]] = max(health[rem - L[ind]], health[rem] + J[ind])
+
+        health[-L[ind] - 1] = max(health[-L[ind] - 1], J[ind])
     
     print(max(health))
