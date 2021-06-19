@@ -12,7 +12,7 @@ r_input = sys.stdin.readline
 # -------------------------------------- #
 
 
-if __name__ == "__main__":
+def run():
     T = int(r_input())
     mv = [(0, 1), (1, 0), (-1, 0), (0, -1)]
 
@@ -25,7 +25,6 @@ if __name__ == "__main__":
             board[X][Y] = 1
     
         visit = [[0] * N for _ in range(M)]
-        visit[0][0] = 1
         result = 0
 
         for x in range(M):
@@ -48,3 +47,7 @@ if __name__ == "__main__":
                                     queue.append((tmp_x, tmp_y))
         
         print(result)
+
+
+if __name__ == "__main__":
+    run()
